@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Ali's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm Ali Ahsan
+                </h1>
+                <p class="hero-subtitle">Data Scientist</p>
+                <p class="hero-description">
+                    IBM certified Data Scientist, enrolled in BS Data Science at NUST. I clean data, analyze it and provide visual insights through static graphs and interactive dashboards
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="images/profile.jpg" alt="Ali Ahsan" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor of Science in Data Science</h3>
+                        <p class="institution">National University Of Science And Technology</p>
+                        <p class="year">2024 - Present</p>
+                        <p class="description">
+                            Studying data science with major emphasis on databases, data structures and algorithms and data analysis
+                        </p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>IBM Data Science Professional Certification</h3>
+                        <p class="institution">IBM</p>
+                        <p class="link"><a href="https://www.coursera.org/account/accomplishments/verify/2234567890">View Certificate</a></p>
+                        <p class="year">2025</p>
+                        <p class="description">
+                            Completed comprehensive data science 12 course series with focus on data cleaning, analysis, visualization and machine learning in python environments
+                        </p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Generative AI with Large Language Model</h3>
+                        <p class="institution">Deeplearning.AI</p>
+                        <p class="link"><a href="https://www.coursera.org/account/accomplishments/verify/2234567890">View Certificate</a></p>
+                        <p class="year">2025</p>
+                        <p class="description">
+                            Completed a course regarding generative AI with large langauge models through in-depth conceptual learning
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>SpaceX Analysis</h3>
+                        <p class="project-description">
+                            Analyzed SpaceX data from wikipedia scraping and SpaceX API to understand their 1st stage reusability.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Seaborn</span>
+                            <span class="tech-tag">Plotly Dash</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aliahsan08/SpaceX-Analysis" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Superstore Sales Dashboard</h3>
+                        <p class="project-description">
+                            Analyzed Superstore sales data to understand sales trends. Visualized the data on a dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Plotly Dash</span>
+                            <span class="tech-tag">Render</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aliahsan08/Superstore-Sales-Dashboard" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://superstoresaledashboard.onrender.com/" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Car Sales Analysis</h3>
+                        <p class="project-description">
+                            Analyzed car sales data to understand customer behavior and sales trends in the US.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Seaborn</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aliahsan08/Car-Sales-Analysis" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather App</h3>
+                        <p class="project-description">
+                        Uses OpenWeatherMap API to get real time weather data for a given city. Requires login or registeration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aliahsan08/Django-Weather-App" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Echoes Of Freedom</h3>
+                        <p class="project-description">
+                            A console based labrynth game with a proper story line, simulated battle system and levels.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">SFML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aliahsan08/Echoes-Of-Freedom" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Remote Patient Management System</h3>
+                        <p class="project-description">
+                            A remote patient management system for a hospital that allows different users to perform their respective tasks.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aliahsan08/Remote-Patient-Management-System" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <h3>Data Scientist (Intern)</h3>
+                        <span class="company">Excelerate</span>
+                        <span class="period">2025 August - 2025 September</span>
+                    </div>
+                    <p class="experience-description">
+                        Data Science intern responsible for handling data and process it through proper in-depth analysis, followed by appropriate visualization techniques to provide actionable insights.
+
+                    </p>
+                    <div class="experience-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:ranaaliahsan7860@gmail.com">ranaaliahsan7860@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.google.com/?q=Islamabad,Pakistan" target="_blank">Islamabad, Pakistan</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/aliahsan08" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aliahsan08" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.fiverr.com/sellers/aliahsan08/edit" class="social-link" target="_blank">
+                        <span style="font-weight: bold; font-size: 16px;">F</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html> 
