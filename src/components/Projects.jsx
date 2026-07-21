@@ -36,7 +36,7 @@ const Projects = () => {
             <span className="tag">Retrieval-Augmented Generation</span>
 
           </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://aliahsan08-taxpilot.hf.space" target="_blank" rel="noopener noreferrer" className="btn interactive">Live</a>
             <a href="https://github.com/aliahsan08/TaxPilot" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
             <button className="btn interactive" onClick={() => openModal('/images/TaxPilot Architecture Diagram.png', 'TaxPilot Architecture')}>
@@ -61,7 +61,7 @@ const Projects = () => {
             <span className="tag">DynamoDB</span>
             <span className="tag">Retrieval-Augmented Generation</span>
           </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://aliahsan08-hearth-kitchen-assistant.hf.space" target="_blank" rel="noopener noreferrer" className="btn interactive">Live</a>
             <a href="https://github.com/aliahsan08/Hearth-Kitchen-Assistant" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
             <button className="btn interactive" onClick={() => openModal('/images/Hearth Architecture Diagram.png', 'Hearth Architecture')}>
@@ -82,7 +82,7 @@ const Projects = () => {
             <span className="tag">EDA</span>
             <span className="tag">Data Visualization</span>
           </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://github.com/aliahsan08/SpaceX-Analysis" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
           </div>
         </div>
@@ -99,7 +99,7 @@ const Projects = () => {
             <span className="tag">Sports Analytics</span>
             <span className="tag">Data Visualization</span>
           </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://github.com/aliahsan08/UCL-2025-26-Analysis" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Projects = () => {
             <span className="tag">Business Intelligence</span>
             <span className="tag">Data Visualization</span>
           </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://superstoresaledashboard.onrender.com/" target="_blank" rel="noopener noreferrer" className="btn interactive">Live</a>
             <a href="https://github.com/aliahsan08/Superstore-Sales-Dashboard" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
           </div>
@@ -137,7 +137,7 @@ const Projects = () => {
             <span className="tag">Data Structures</span>
             <span className="tag">Algorithms</span>
           </div>
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://github.com/aliahsan08/DSA-Project-Test" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
           </div>
         </div>

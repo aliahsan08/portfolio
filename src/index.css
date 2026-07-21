@@ -4,10 +4,10 @@
   --bg-color: #0A0A0A;
   --text-primary: #EDEDED;
   --text-secondary: #888888;
-  --accent-color: #00E5FF;       /* Brighter blue for links */
+  --accent-color: #00E5FF;
   --accent-hover: #00B3CC;
   --border-color: #333333;
-  --card-bg: #1A202C;            /* Different shade for boxes (grey-blue) */
+  --card-bg: #1A202C;
   --card-border: #2D3748;
 }
 
@@ -34,10 +34,6 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-color);
 }
 
 /* Custom Cursor */
@@ -92,7 +88,7 @@ section {
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: var(--text-primary);
-  border-bottom: 4px solid var(--text-secondary); /* Less prominent than accent */
+  border-bottom: 4px solid var(--text-secondary);
   display: inline-block;
   padding-bottom: 0.5rem;
 }
@@ -113,20 +109,9 @@ section {
   font-size: 0.85rem;
 }
 
-.btn:hover {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-}
-
-/* White buttons (for ExpandableList) */
 .btn-white {
   border-color: #EDEDED;
   color: #EDEDED;
-}
-
-.btn-white:hover {
-  background-color: #EDEDED;
-  color: var(--bg-color);
 }
 
 /* Cards */
@@ -135,14 +120,8 @@ section {
   padding: 2rem;
   margin-bottom: 2rem;
   transition: all 0.3s ease;
-  background-color: var(--card-bg); /* Charcoal/grey-blue for boxes */
+  background-color: var(--card-bg);
   border-radius: 4px;
-}
-
-.card:hover {
-  border-color: var(--text-secondary);
-  transform: translate(4px, -4px);
-  box-shadow: -4px 4px 0 var(--text-secondary);
 }
 
 .card-title {
@@ -153,7 +132,7 @@ section {
 
 .card-subtitle {
   font-size: 1rem;
-  color: var(--accent-color); /* Bright blue for subtitles/orgs */
+  color: var(--accent-color);
   margin-bottom: 1rem;
   font-style: italic;
 }
@@ -277,6 +256,7 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-close {
@@ -294,8 +274,17 @@ section {
   font-size: 1rem;
 }
 
-.modal-close:hover {
-  background: #CC2F26;
+.iframe-container {
+  width: 100%;
+  height: 75vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Animations */
@@ -312,8 +301,54 @@ section {
   }
 }
 
-/* Responsive */
+/* --- RESPONSIVE & MOBILE UX --- */
+
+/* Hover states only apply on devices that support hover (prevents sticky mobile hover) */
+@media (hover: hover) {
+  a:hover {
+    color: var(--accent-color);
+  }
+  .btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+  }
+  .btn-white:hover {
+    background-color: #EDEDED;
+    color: var(--bg-color);
+  }
+  .card:hover {
+    border-color: var(--text-secondary);
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px 0 var(--text-secondary);
+  }
+  .modal-close:hover {
+    background: #CC2F26;
+  }
+}
+
+/* Touch Device Specific */
+@media (pointer: coarse) {
+  /* Disable custom cursor and reset default cursor behaviors */
+  .custom-cursor {
+    display: none !important;
+  }
+  body, .btn, .modal-close, a {
+    cursor: auto !important;
+  }
+}
+
+/* Mobile Layout Scaling */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  section {
+    padding: 40px 0;
+  }
+  .hero {
+    padding-top: 50px;
+    min-height: auto;
+  }
   .hero-title {
     font-size: 3rem;
   }
@@ -323,5 +358,73 @@ section {
   }
   .section-title {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .card {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  /* Fix #4: Stack card headers (title + date) vertically */
+  .card > div:first-child {
+    flex-direction: column !important;
+    gap: 0.25rem;
+  }
+  /* Fix #5: Stack cert cards vertically */
+  .card[style*="space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .modal-content {
+    width: 95vw;
+    height: 90vh;
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+  .modal-close {
+    top: 5px;
+    right: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .hero-links {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 40px;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+  }
+  .hero-links .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .card-button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .card-button-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .tag {
+    font-size: 0.75rem;
   }
 }

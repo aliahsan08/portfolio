@@ -23,7 +23,11 @@ const Modal = ({ isOpen, onClose, imageUrl, title, pdfUrl }) => {
         </button>
         {title && <h3 className="card-title" style={{ marginBottom: '1rem', textAlign: 'center' }}>{title}</h3>}
         {imageUrl && <img src={imageUrl} alt={title || "Diagram"} style={{ maxWidth: '100%', maxHeight: '75vh', objectFit: 'contain' }} />}
-        {pdfUrl && <iframe src={pdfUrl} title={title} style={{ width: '100%', height: '75vh', border: 'none' }} />}
+        {pdfUrl && (
+          <div className="iframe-container">
+            <iframe src={pdfUrl} title={title} />
+          </div>
+        )}
       </div>
     </div>
   );
