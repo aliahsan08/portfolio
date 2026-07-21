@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #0A0A0A;
+  --text-primary: #EDEDED;
+  --text-secondary: #888888;
+  --accent-color: #00E5FF;       /* Brighter blue for links */
+  --accent-hover: #00B3CC;
+  --border-color: #333333;
+  --card-bg: #1A202C;            /* Different shade for boxes (grey-blue) */
+  --card-border: #2D3748;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+h1, h2, h3, h4, h5, h6, .mono {
+  font-family: 'Space Mono', monospace;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10001;
+  mix-blend-mode: difference;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-cursor.active {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+/* Canvas Background */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* General Layout */
+section {
+  padding: 50px 0;
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  border-bottom: 4px solid var(--text-secondary); /* Less prominent than accent */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Buttons / Links */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: none;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* White buttons (for ExpandableList) */
+.btn-white {
+  border-color: #EDEDED;
+  color: #EDEDED;
+}
+
+.btn-white:hover {
+  background-color: #EDEDED;
+  color: var(--bg-color);
+}
+
+/* Cards */
+.card {
+  border: 2px solid var(--card-border);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  background-color: var(--card-bg); /* Charcoal/grey-blue for boxes */
+  border-radius: 4px;
+}
+
+.card:hover {
+  border-color: var(--text-secondary);
+  transform: translate(4px, -4px);
+  box-shadow: -4px 4px 0 var(--text-secondary);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: var(--accent-color); /* Bright blue for subtitles/orgs */
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.list-item {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.list-item::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  border: 1px solid var(--text-primary);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  font-family: 'Space Mono', monospace;
+  color: var(--text-primary);
+  background: rgba(0,0,0,0.2);
+}
+
+.tag.highlight {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: none;
+  padding-top: 80px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Typing Animation */
+.role-text {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.role-text::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 10%;
+  height: 80%;
+  width: 2px;
+  background-color: var(--accent-color);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border: 2px solid var(--card-border);
+  position: relative;
+  width: 90vw;
+  max-width: 1200px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #FF3B30;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-family: 'Space Mono', monospace;
+  cursor: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal-close:hover {
+  background: #CC2F26;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
