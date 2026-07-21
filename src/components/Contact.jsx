@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section id="contact" className="fade-in" style={{ borderBottom: 'none' }}>
       <h2 className="section-title">Contact</h2>
-      <div className="hero-links" style={{ justifyContent: 'flex-start', flexWrap: 'wrap' }}>
+      <div className="hero-links" style={{ justifyContent: 'flex-start', flexWrap: 'wrap', marginTop: 0 }}>
         <a href="mailto:ranaaliahsan7860@gmail.com" className="btn interactive">Email</a>
         <a href="https://linkedin.com/in/aliahsan08" target="_blank" rel="noopener noreferrer" className="btn interactive">LinkedIn</a>
         <a href="https://github.com/aliahsan08" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
