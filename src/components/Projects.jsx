@@ -19,6 +19,33 @@ const Projects = () => {
 
       <ExpandableList initialCount={3}>
 
+        {/* 1 - Groove4U */}
+        <div className="card interactive">
+          <h3 className="card-title">Groove4U</h3>
+          <p className="card-subtitle">Music Discovery Engine</p>
+          <div style={{ marginTop: '1rem' }}>
+            <div className="list-item">Built a music recommendation system enabling users to discover and curate personalized music libraries.</div>
+            <div className="list-item">Designed a multi-stage retrieval pipeline: Two-Tower neural network for candidate retrieval, LightGBM reranking with a diversity-aware layer; used Supabase (auth/data) and Qdrant (vector search).</div>
+            <div className="list-item">Achieved HitRate@100: 0.82 and NDCG@100: 0.29 on retrieval across a 90K tracks, 4M interaction dataset.</div>
+          </div>
+          <div className="tags">
+            <span className="tag highlight">HitRate@100: 0.82</span>
+            <span className="tag highlight">NDCG@100: 0.29</span>
+            <span className="tag">Neural Networks</span>
+            <span className="tag">LightGBM</span>
+            <span className="tag">Recommender Systems</span>
+
+          </div>
+          <div className="card-button-group" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="https://groove4-u.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn interactive">Live</a>
+            <a href="https://github.com/aliahsan08/Groove4U" target="_blank" rel="noopener noreferrer" className="btn interactive">GitHub</a>
+            <button className="btn interactive" onClick={() => openModal('/images/Groove4U Architecture Diagram.png', 'Groove4U Architecture')}>
+              View Diagram
+            </button>
+          </div>
+        </div>
+
+
         {/* 1 - TaxPilot */}
         <div className="card interactive">
           <h3 className="card-title">TaxPilot</h3>
